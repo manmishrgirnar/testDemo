@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="angular.min.js"></script>
+<script src="script.js"></script>
+<body ng-app="mainApp">
+
+<div  ng-controller="shapeController">
+    <table>
+        <tr>
+        <td>
+            Color
+        </td>
+        <td>
+            Value
+        </td>
+        <td>
+            Likes
+        </td>
+        <td>
+            Dislikes
+        </td>
+        <td>
+            Action
+        </td>
+        </tr>
+        <tr ng-repeat="color in colorSet">
+       <input type="button" ng-click="like(color)">     <td>
+            {{color.color}}
+        </td>
+        <td>
+            {{color.value}}
+        </td>
+        <td>
+            {{color.like}}
+        </td>
+        <td>
+            {{color.dislike}}
+        </td>
+        <td>
+            <input type="button" ng-click="like(color)" value="Like">
+        </td>
+        </tr>
+        
+    </table>
+</div>
+
+</body>
+</html>

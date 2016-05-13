@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="angular.min.js"></script>
+<script src="script.js"></script>
+<body ng-app="mainApp">
+
+<div  ng-controller="shapeController">
+    <select ng-model="sortBy">
+        <option value=""></option>
+        <option></option>
+    </select>
+    <input type="text" ng-model="searchText.color" >
+     <input type="text" ng-model="searchText.value" >
+   
+    <table>
+        <tr>
+        <td>
+            Color
+        </td>
+        <td>
+            Value
+        </td>
+        </tr>
+        <tr ng-repeat="colors in colorSet | filter : searchText">
+            <td>
+            {{colors.color}}
+        </td>
+        <td>
+            {{colors.value}}
+        </td>
+        </tr>
+        
+    </table>
+</div>
+
+</body>
+</html>
